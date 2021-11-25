@@ -1,0 +1,10 @@
+---
+- hosts: web
+  tasks:
+    - name: Instalar epel en servidores Linux
+      command: yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+    - name: Instalar NMON
+      yum:
+        name: nmon
+        state: latest
